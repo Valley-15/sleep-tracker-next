@@ -2,10 +2,19 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: [
-      "img.clerk.com", // for Clerk user avatars
-      "images.clerk.dev", // sometimes avatars come from this too
-      "lh3.googleusercontent.com", // for Google OAuth fallback
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.clerk.com",
+      },
+      {
+        protocol: "https",
+        hostname: "images.clerk.dev",
+      },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com", // if you're using Google auth
+      },
     ],
   },
 };
