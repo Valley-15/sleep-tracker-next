@@ -27,15 +27,21 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <html lang="en">
+        <head>
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+          {/* Optionally support PNG as fallback */}
+          {/* <link rel="icon" type="image/png" href="/favicon.png" /> */}
+          <meta name="theme-color" content="#ffffff" />
+        </head>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <Navbar/>
+          <Navbar />
           {children}
-          <Footer/>
-      </body>
+          <Footer />
+        </body>
       </html>
-      </ClerkProvider>
+    </ClerkProvider>
   );
 }
