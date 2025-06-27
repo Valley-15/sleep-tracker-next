@@ -5,7 +5,6 @@ import Image from "next/image";
 
 import RecordChart from "@/components/RecordChart";
 import AverageSleep from "@/components/AverageSleep";
-import BestWorstSleep from "@/components/BestWorstSleep";
 import RecordHistory from "@/components/RecordHistory";
 import AddNewRecord from "@/components/AddNewRecord";
 
@@ -60,14 +59,13 @@ const HomePage = async () => {
           </div>
 
           {/* Add New Record */}
-          <AddNewRecord  />
+          <AddNewRecord />
         </div>
 
         {/* Right Column */}
-        <div className="space-y-6">
+        <div className="bg-white rounded-lg shadow-md p-6 space-y-4">
           <RecordChart />
           <AverageSleep />
-          <BestWorstSleep />
         </div>
       </div>
 
