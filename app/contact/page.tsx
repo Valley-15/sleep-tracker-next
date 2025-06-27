@@ -29,6 +29,7 @@ const ContactPage = () => {
         throw new Error("Failed to send");
       }
     } catch (error) {
+      console.error("Error sending message:", error);
       setStatus("error");
     }
   };
