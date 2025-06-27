@@ -3,7 +3,7 @@ import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 
 
-// import RecordChart from "@/components/RecordChart";
+import RecordChart from "@/components/RecordChart";
 import AverageSleep from "@/components/AverageSleep";
 import BestWorstSleep from "@/components/BestWorstSleep";
 import RecordHistory from "@/components/RecordHistory";
@@ -65,7 +65,7 @@ const HomePage = async () => {
 
         {/* Right Column */}
         <div className="space-y-6">
-          {/* <RecordChart /> */}
+          <RecordChart />
           <AverageSleep />
           <BestWorstSleep />
         </div>
